@@ -81,7 +81,7 @@ function dice(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;  
 }
 let rollDice = dice(1,6);
-console.log(rollDice)
+console.log(rollDice);
 
 /* EXERCISE 2
     Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one.
@@ -93,6 +93,15 @@ let num1 = 10;
 let num2 = 32;
 // invoke
 console.log(whoIsBigger());
+
+// function whoIsSmaller(){
+//     return Math.min(num3, num4);
+//    }
+//    let num3 = 10;
+//    let num4 = 32;
+//    // invoke
+//    console.log(whoIsSmaller());
+
 /* EXERCISE 3
     Write a function called splitMe which receives a string as a parameter and returns an array with every word in that string.
     Ex.: splitMe("I love coding") => returns ["I", "Love", "Coding"]
