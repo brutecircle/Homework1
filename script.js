@@ -76,6 +76,12 @@ console.log(me)
 /* EXERCISE 1
     Write a function called dice; it should randomize an integer number between 1 and 6.
 */
+// just used the old function i had to roll the dice also we need a rounded number 
+function dice(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;  
+}
+let rollDice = dice(1,6);
+console.log(rollDice)
 
 /* EXERCISE 2
     Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one.
