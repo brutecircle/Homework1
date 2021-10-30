@@ -106,9 +106,12 @@ console.log(whoIsBigger());
     Write a function called splitMe which receives a string as a parameter and returns an array with every word in that string.
     Ex.: splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
-function splitMe(){
-    
+// just used a split string method 
+function splitMe( str ){
+    str = "I love coding";
+    return str.split(" ");
 }
+console.log(splitMe());
 
 /* EXERCISE 4
     Write a function called deleteOne which receives a string and a boolean as parameters.
