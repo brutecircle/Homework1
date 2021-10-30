@@ -123,7 +123,16 @@ function deleteOne(){
     // if boolean is true 
     // return str without [0]letter 
     // else return without last letter
+    let str = " Hello World";
+    // let str = [];
+    if (typeof str === 'string') {
+        return str.substring(1);
+    }
+    else 
+    // still not sure 
+        return str.slice(0, -1);
 }
+console.log(deleteOne())
 
 /* EXERCISE 5
    Write a function called onlyLetters which receives a string as a parameter and returns it removing all the digits.
