@@ -118,7 +118,11 @@ console.log(splitMe());
     If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
 function deleteOne(){
-    
+    // Pseudocode
+    // str and Boolean
+    // if boolean is true 
+    // return str without [0]letter 
+    // else return without last letter
 }
 
 /* EXERCISE 5
