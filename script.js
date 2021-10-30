@@ -68,6 +68,9 @@ console.log(me);
 /* EXERCISE G
    Write a piece of code for programmatically removing the last skill from the skills array inside the me object.
 */
+delete me.skills["Php"];
+console.log(me)
+
 
 // JS Functions
 /* EXERCISE 1
