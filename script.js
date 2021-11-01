@@ -57,37 +57,36 @@ console.log(me);
    Write a piece of code for programmatically adding to the me object you defined before an array called skills, containing the programming languages you know right now.
 */
 me.skills = {
-    Javascript:true,
-    Typescript:false,
-    Python:true,
-    React:true,
-    Php:false
-}
+  Javascript: true,
+  Typescript: false,
+  Python: true,
+  React: true,
+  Php: false,
+};
 console.log(me);
 
 /* EXERCISE G
    Write a piece of code for programmatically removing the last skill from the skills array inside the me object.
 */
-delete me.skills["Php"];
-console.log(me)
-
+delete me.skills['Php'];
+console.log(me);
 
 // JS Functions
 /* EXERCISE 1
     Write a function called dice; it should randomize an integer number between 1 and 6.
 */
-// just used the old function i had to roll the dice also we need a rounded number 
+// just used the old function i had to roll the dice also we need a rounded number
 function dice(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;  
+  return Math.floor(Math.random() * (max - min)) + min;
 }
-let rollDice = dice(1,6);
+let rollDice = dice(1, 6);
 console.log(rollDice);
 
 /* EXERCISE 2
     Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one.
 */
-function whoIsBigger(){
- return Math.max(num1, num2);
+function whoIsBigger() {
+  return Math.max(num1, num2);
 }
 let num1 = 10;
 let num2 = 32;
@@ -106,10 +105,10 @@ console.log(whoIsBigger());
     Write a function called splitMe which receives a string as a parameter and returns an array with every word in that string.
     Ex.: splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
-// just used a split string method 
-function splitMe( str ){
-    str = "I love coding";
-    return str.split(" ");
+// just used a split string method
+function splitMe(str) {
+  str = 'I love coding';
+  return str.split(' ');
 }
 console.log(splitMe());
 
@@ -117,60 +116,68 @@ console.log(splitMe());
     Write a function called deleteOne which receives a string and a boolean as parameters.
     If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
-function deleteOne(){
-    // Pseudocode
-    // str and Boolean
-    // if boolean is true 
-    // return str without [0]letter 
-    // else return without last letter
-    let strN = " Hello World";
-    // let str = [];
-    if (typeof strN === 'string') {
-        return strN.substring(1);
-    }
-    else 
-    // still not sure 
-        return strN.slice(0, -1);
+function deleteOne() {
+  // Pseudocode
+  // str and Boolean
+  // if boolean is true
+  // return str without [0]letter
+  // else return without last letter
+  let strN = ' Hello World';
+  // let str = [];
+  if (typeof strN === 'string') {
+    return strN.substring(1);
+  }
+  // still not sure
+  else return strN.slice(0, -1);
 }
-console.log(deleteOne())
+console.log(deleteOne());
 
 /* EXERCISE 5
    Write a function called onlyLetters which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs") => returns "I have  dogs"
 */
 // we using the regex /^[A-Za-z]+$/
-// if str has numbers and letters 
-// then remove the numbers 
+// if str has numbers and letters
+// then remove the numbers
 // return new string with no numbers
-// option 1 : for loop, loop through every word in the Arrayif you find 
-// a number pop it out then return a new array 
+// option 1 : for loop, loop through every word in the Arrayif you find
+// a number pop it out then return a new array
 // option 2: if statement ,if the lengthof the str have a number
-//  then pop it out and return a new array 
-function onlyLetters(){
-  let string = "I have 4 dogs";
-  if(string.match(/^[A-Za-z]+$/)) {
-    return true  
-  }else 
-   return  string.replace(/[0-9]/g, '')
- }
- console.log(onlyLetters())
-
-    
-
+//  then pop it out and return a new array
+function onlyLetters() {
+  let string = 'I have 4 dogs';
+  if (string.match(/^[A-Za-z]+$/)) {
+    return true;
+  } else return string.replace(/[0-9]/g, '');
+}
+console.log(onlyLetters());
 
 /* EXERCISE 6
    Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
 */
-function isThisAnEmail(){
-    
+// i think with email it has to come to the regex expression 
+// this is not working 
+function isThisAnEmail() {
+  let email = 'talent@yahoo.com';
+  if (email.length === email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) {
+    return "this is an Email";
+  } else return('this is not Email');
 }
+console.log(isThisAnEmail())
 
 /* EXERCISE 7
    Write a function called whatDayIsIt that should return the current day of the week.
 */
-function whatDayIsIt(){
-    
+// returns the date and the day 
+// return new Date().toString()
+function whatDayIsIt() {
+  let days = ['Sun','Mon','Tue','Wed','Thur','Fri','Sat'];
+  // let date = the date 
+  // then compare 
+  // if the first string match any in the day return that day 
+
 }
+console.log(whatDayIsIt())
 
 /* EXERCISE 8
     Write a function called rollTheDices which receives a number as a parameter.
