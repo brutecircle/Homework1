@@ -123,14 +123,14 @@ function deleteOne(){
     // if boolean is true 
     // return str without [0]letter 
     // else return without last letter
-    let str = " Hello World";
+    let strN = " Hello World";
     // let str = [];
-    if (typeof str === 'string') {
-        return str.substring(1);
+    if (typeof strN === 'string') {
+        return strN.substring(1);
     }
     else 
     // still not sure 
-        return str.slice(0, -1);
+        return strN.slice(0, -1);
 }
 console.log(deleteOne())
 
@@ -138,9 +138,25 @@ console.log(deleteOne())
    Write a function called onlyLetters which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs") => returns "I have  dogs"
 */
+// we using the regex /^[A-Za-z]+$/
+// if str has numbers and letters 
+// then remove the numbers 
+// return new string with no numbers
+// option 1 : for loop, loop through every word in the Arrayif you find 
+// a number pop it out then return a new array 
+// option 2: if statement ,if the lengthof the str have a number
+//  then pop it out and return a new array 
 function onlyLetters(){
+  let string = "I have 4 dogs";
+  if(string.match(/^[A-Za-z]+$/)) {
+    return true  
+  }else 
+   return  string.replace(/[0-9]/g, '')
+ }
+ console.log(onlyLetters())
+
     
-}
+
 
 /* EXERCISE 6
    Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
