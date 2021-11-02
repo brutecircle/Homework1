@@ -197,6 +197,16 @@ console.log(whatDayIsIt())
 /* EXERCISE 10
    Write a function called isTodayMyBirthday which should return true if today's your birthday, false otherwise.
 */
+function isTodayMyBirthday() {
+  let today = new Date().toString();
+  let myBirthday = "Mon May 03 1993";
+  if(today.length === myBirthday.length ){
+    return true
+  } else
+  return "Not Yet my Bday"
+  
+}
+console.log(isTodayMyBirthday())
 
 // JS Arrays & Objects
 // NOTE: the movies array used in some exercises is defined at the end of this file
